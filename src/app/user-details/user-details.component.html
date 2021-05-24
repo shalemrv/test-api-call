@@ -1,0 +1,112 @@
+<!-- 
+{
+	"gender": "female",
+	"name": {
+		"title": "Miss",
+		"first": "Lily",
+		"last": "Grant"
+	},
+	"location": {
+		"street": {
+			"number": 9297,
+			"name": "George Street"
+		},
+		"city": "Celbridge",
+		"state": "Limerick",
+		"country": "Ireland",
+		"postcode": 56964,
+		"coordinates": {
+			"latitude": "20.1587",
+			"longitude": "162.5234"
+		},
+		"timezone": {
+			"offset": "-3:00",
+			"description": "Brazil, Buenos Aires, Georgetown"
+		}
+	},
+	"email": "lily.grant@example.com",
+	"login": {
+		"uuid": "a535e338-873e-49e7-8226-50f76b75e273",
+		"username": "happyfrog128",
+		"password": "bull",
+		"salt": "Dm6M4DHk",
+		"md5": "56517ed6f42868918e10fc586bbb6c49",
+		"sha1": "3c23fa64acad51f42a3b72512455a19c41894f43",
+		"sha256": "30edc9f3040e40d0900fdb031f5025a32a48a067a9d8b567911cdac62d2e51bc"
+	},
+	"dob": {
+		"date": "1996-11-01T19:32:17.949Z",
+		"age": 25
+	},
+	"registered": {
+		"date": "2010-10-08T23:02:53.802Z",
+		"age": 11
+	},
+	"phone": "061-438-1420",
+	"cell": "081-970-2052",
+	"id": {
+		"name": "PPS",
+		"value": "0135508T"
+	},
+	"picture": {
+		"large": "https://randomuser.me/api/portraits/women/38.jpg",
+		"medium": "https://randomuser.me/api/portraits/med/women/38.jpg",
+		"thumbnail": "https://randomuser.me/api/portraits/thumb/women/38.jpg"
+	},
+	"nat": "IE"
+},
+ -->
+<h3 class="component-heading">User Details</h3>
+<div class="details-container">
+	<div class="display-2-grid">
+		<div class="card">
+			<div class="label">Number</div>
+			<div class="value">{{ index }}</div>
+		</div>
+		<div class="img-card">
+			<h3>{{ selectedUser.dob.age }} y</h3>
+			<img
+				[src]="selectedUser.picture.medium"
+				alt="Picture"
+				class="ppic-img"
+			/>
+		</div>
+		<div class="card orange">
+			<div class="label">First Name</div>
+			<div class="value">
+				{{ selectedUser.name.title }}. {{ selectedUser.name.first }}
+			</div>
+		</div>
+		<div class="card orange">
+			<div class="label">Last Name</div>
+			<div class="value">{{ selectedUser.name.last }}</div>
+		</div>
+		<div class="card">
+			<div class="label">City</div>
+			<div class="value">{{ selectedUser.location.city }}</div>
+		</div>
+		<div class="card">
+			<div class="label">State</div>
+			<div class="value">{{ selectedUser.location.state }}</div>
+		</div>
+		<div class="card">
+			<div class="label">Country</div>
+			<div class="value">{{ selectedUser.location.country }}</div>
+		</div>
+		<div class="card">
+			<div class="label">Postcode</div>
+			<div class="value">{{ selectedUser.location.postcode }}</div>
+		</div>
+		<div class="card blue">
+			<div class="label">Phone</div>
+			<div class="value">{{ selectedUser.phone }}</div>
+		</div>
+		<div class="card blue">
+			<div class="label">Cell</div>
+			<div class="value">{{ selectedUser.cell }}</div>
+		</div>
+	</div>
+</div>
+<div class="home-container">
+	<div class="home-button" routerLink="/">GO HOME</div>
+</div>
